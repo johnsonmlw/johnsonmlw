@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-03-01 Fri 10:44 -->
+<!-- 2024-03-01 Fri 11:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Syncthing node</title>
+<title>just notes</title>
 <meta name="author" content="M Johnson" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -197,55 +197,95 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Syncthing node</h1>
+<h1 class="title">just notes</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgbd48574">1. Install</a></li>
-<li><a href="#orga020f60">2. Configure UWF for syncthing</a></li>
-<li><a href="#orga6b2f7b">3. To configure a remote syncthing node via browser, from the client:</a></li>
+<li><a href="#org0c9628f">Context</a></li>
+<li><a href="#orga869586">Samba</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbd48574" class="outline-2">
-<h2 id="orgbd48574"><span class="section-number-2">1.</span> Install</h2>
-<div class="outline-text-2" id="text-1">
-<pre class="example">
-sudo apt install syncthing
-systemctl enable syncthing@pi.service (where pi is the user to run syncthing as)
-systemctl start syncthing@pi.service
+
+<div id="outline-container-org0c9628f" class="outline-2">
+<h2 id="org0c9628f">Context</h2>
+<div class="outline-text-2" id="text-org0c9628f">
+<ul class="org-ul">
+<li>css colours for this page are based on <a href="https://github.com/protesilaos/modus-themes">modus-vivendi-tinted</a> org-mode theme (thank you)</li>
+<li>This page is written with <a href="https://orgmode.org/">org-mode</a> (thank you)</li>
+<li>The following notes are for <a href="https://www.debian.org/">Debian Bookworm</a> (thank you) but should be reasonably transferrable to other linux/unix setups</li>
+<li>Linux commands below assume we are logged in as root (we could prepend sudo to each command instead)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga869586" class="outline-2">
+<h2 id="orga869586">Samba</h2>
+<div class="outline-text-2" id="text-orga869586">
+</div>
+<div id="outline-container-org38d6e7e" class="outline-3">
+<h3 id="org38d6e7e">A simple share, read/write for anyone <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-03-01 Fri&gt;</span></span></h3>
+<div class="outline-text-3" id="text-org38d6e7e">
+</div>
+<div id="outline-container-orgf28ba64" class="outline-4">
+<h4 id="orgf28ba64">/etc/smb.conf</h4>
+<div class="outline-text-4" id="text-orgf28ba64">
+<pre class="example" id="orgb0f232d">
+[global]
+map to guest = Bad User
+
+[share]
+path = /mnt/share
+guest ok = yes
+writeable = yes
+force user = sam
 </pre>
 </div>
 </div>
 
-<div id="outline-container-orga020f60" class="outline-2">
-<h2 id="orga020f60"><span class="section-number-2">2.</span> Configure UWF for syncthing</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org7a1260b" class="outline-4">
+<h4 id="org7a1260b">We simplify ownership of all new directories and files created by any client (e.g. Windows) by force user = sam (any standard linux user account)</h4>
+</div>
+
+<div id="outline-container-orge7b98fd" class="outline-4">
+<h4 id="orge7b98fd">Create linux directories and set ownership (any standard linux user account)</h4>
+<div class="outline-text-4" id="text-orge7b98fd">
 <pre class="example">
-sudo ufw allow 22000/tcp
-sudo ufw allow 22000/udp
-sudo ufw reload
+mkdir /mnt/share
+chown sam:sam /mnt/share
 </pre>
 </div>
 </div>
 
-<div id="outline-container-orga6b2f7b" class="outline-2">
-<h2 id="orga6b2f7b"><span class="section-number-2">3.</span> To configure a remote syncthing node via browser, from the client:</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org1c8fef3" class="outline-4">
+<h4 id="org1c8fef3">Note: For the simplest of guest shares, we can avoid clients (e.g. Windows) even asking our guest for a username and password by having exactly zero samba user accounts</h4>
+<div class="outline-text-4" id="text-org1c8fef3">
+</div>
+<ul class="org-ul">
+<li><a id="org5502d77"></a>List smb users<br />
+<div class="outline-text-5" id="text-org5502d77">
 <pre class="example">
-ssh -L 9595:localhost:8384 pi@pi4
+pdbedit -L -v
 </pre>
+</div>
+</li>
 
-<p>
-Point local browser to localhost:9595
-</p>
+<li><a id="orge073b71"></a>Delete each smb user<br />
+<div class="outline-text-5" id="text-orge073b71">
+<pre class="example">
+pdbedit -x -u sam
+</pre>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: M Johnson</p>
-<p class="date">Created: 2024-03-01 Fri 10:44</p>
+<p class="date">Created: 2024-03-01 Fri 11:50</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
