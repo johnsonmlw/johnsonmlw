@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-03-01 Fri 10:30 -->
+<!-- 2024-03-01 Fri 10:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Syncthing node</title>
@@ -193,7 +193,7 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" type="text/css" href="../css/org2.css"/>
+<link rel="stylesheet" type="text/css" href="./org.css"/>
 </head>
 <body>
 <div id="content" class="content">
@@ -202,14 +202,14 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1f83159">1. Install</a></li>
-<li><a href="#org6319806">2. Configure UWF for syncthing</a></li>
-<li><a href="#org5877984">3. To configure a remote syncthing node via browser, from the client:</a></li>
+<li><a href="#orgbd48574">1. Install</a></li>
+<li><a href="#orga020f60">2. Configure UWF for syncthing</a></li>
+<li><a href="#orga6b2f7b">3. To configure a remote syncthing node via browser, from the client:</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1f83159" class="outline-2">
-<h2 id="org1f83159"><span class="section-number-2">1.</span> Install</h2>
+<div id="outline-container-orgbd48574" class="outline-2">
+<h2 id="orgbd48574"><span class="section-number-2">1.</span> Install</h2>
 <div class="outline-text-2" id="text-1">
 <pre class="example">
 sudo apt install syncthing
@@ -219,8 +219,8 @@ systemctl start syncthing@pi.service
 </div>
 </div>
 
-<div id="outline-container-org6319806" class="outline-2">
-<h2 id="org6319806"><span class="section-number-2">2.</span> Configure UWF for syncthing</h2>
+<div id="outline-container-orga020f60" class="outline-2">
+<h2 id="orga020f60"><span class="section-number-2">2.</span> Configure UWF for syncthing</h2>
 <div class="outline-text-2" id="text-2">
 <pre class="example">
 sudo ufw allow 22000/tcp
@@ -230,8 +230,8 @@ sudo ufw reload
 </div>
 </div>
 
-<div id="outline-container-org5877984" class="outline-2">
-<h2 id="org5877984"><span class="section-number-2">3.</span> To configure a remote syncthing node via browser, from the client:</h2>
+<div id="outline-container-orga6b2f7b" class="outline-2">
+<h2 id="orga6b2f7b"><span class="section-number-2">3.</span> To configure a remote syncthing node via browser, from the client:</h2>
 <div class="outline-text-2" id="text-3">
 <pre class="example">
 ssh -L 9595:localhost:8384 pi@pi4
@@ -245,7 +245,7 @@ Point local browser to localhost:9595
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: M Johnson</p>
-<p class="date">Created: 2024-03-01 Fri 10:30</p>
+<p class="date">Created: 2024-03-01 Fri 10:44</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
