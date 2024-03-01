@@ -27,8 +27,22 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
+h3 {
+    color: #c0965b
+}
+
+h5 {
+    color: #cf7fa7
+}
+
 a { color: #79A8FF; }
 
 .example {
-    background-color: black;
+    background-color: #0D0E1C;
+    color: #6ae4b9
 }
+
+.timestamp {
+    color: #00d3d0
+}
+
