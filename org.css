@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
 
 @media print {
 	body {
@@ -18,31 +18,10 @@
 }
 
 body {
-    font-family: 'Ubuntu', sans-serif;
-    color: white;
-    background-color: #0D0E1C;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
-}
-
-h3 {
-    color: #c0965b
-}
-
-h5 {
-    color: #cf7fa7
-}
-
-a { color: #79A8FF; }
-
-.example {
-    background-color: #0D0E1C;
-    color: #6ae4b9
-}
-
-.timestamp {
-    color: #00d3d0
 }
 
