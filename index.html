@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-03-06 Wed 09:38 -->
+<!-- 2024-03-14 Thu 17:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>johnsonmlw.github.io/johnsonmlw</title>
@@ -202,26 +202,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8c2c3e9">1. Context</a></li>
-<li><a href="#orged8c04c">2. Hints for these notes</a></li>
-<li><a href="#org5b04712">3. Editor</a>
+<li><a href="#org011d7a5">1. Context</a></li>
+<li><a href="#org688d6a3">2. Hints for these notes</a></li>
+<li><a href="#orga7dd4c3">3. Editor</a>
 <ul>
-<li><a href="#orgc0d930d">3.1. Emacs</a></li>
+<li><a href="#orgb9576b8">3.1. Emacs</a></li>
 </ul>
 </li>
-<li><a href="#orgd59f744">4. Samba</a>
+<li><a href="#org3040f1e">4. Samba</a>
 <ul>
-<li><a href="#org7a1d34e">4.1. Preparation</a></li>
-<li><a href="#orgb7e5a28">4.2. A simple share, read/write for anyone</a></li>
-<li><a href="#orga4b9789">4.3. Private user shares, and shared read/write for anyone</a></li>
+<li><a href="#orgabd2b4f">4.1. Preparation</a></li>
+<li><a href="#org813aa63">4.2. A simple share, read/write for anyone</a></li>
+<li><a href="#org885044d">4.3. Private user shares, and shared read/write for anyone</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org8c2c3e9" class="outline-2">
-<h2 id="org8c2c3e9"><span class="section-number-2">1.</span> Context</h2>
+<div id="outline-container-org011d7a5" class="outline-2">
+<h2 id="org011d7a5"><span class="section-number-2">1.</span> Context</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>The following notes are for <a href="https://www.debian.org/">Debian Bookworm</a> but should be reasonably transferrable to other linux/unix setups</li>
@@ -230,8 +230,8 @@
 </div>
 </div>
 
-<div id="outline-container-orged8c04c" class="outline-2">
-<h2 id="orged8c04c"><span class="section-number-2">2.</span> Hints for these notes</h2>
+<div id="outline-container-org688d6a3" class="outline-2">
+<h2 id="org688d6a3"><span class="section-number-2">2.</span> Hints for these notes</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Ctrl (the keyboard control key) is represented in these notes a C; Alt key is M (for meta)</li>
@@ -242,17 +242,17 @@
 </div>
 </div>
 
-<div id="outline-container-org5b04712" class="outline-2">
-<h2 id="org5b04712"><span class="section-number-2">3.</span> Editor</h2>
+<div id="outline-container-orga7dd4c3" class="outline-2">
+<h2 id="orga7dd4c3"><span class="section-number-2">3.</span> Editor</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgc0d930d" class="outline-3">
-<h3 id="orgc0d930d"><span class="section-number-3">3.1.</span> Emacs</h3>
+<div id="outline-container-orgb9576b8" class="outline-3">
+<h3 id="orgb9576b8"><span class="section-number-3">3.1.</span> Emacs</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org21aca79" class="outline-4">
-<h4 id="org21aca79">Basic emacs commands</h4>
-<div class="outline-text-4" id="text-org21aca79">
+<div id="outline-container-org78745d3" class="outline-4">
+<h4 id="org78745d3">Basic emacs commands</h4>
+<div class="outline-text-4" id="text-org78745d3">
 <ul class="org-ul">
 <li>C-x C-f Find file (open)</li>
 <li>C-x C-s Save</li>
@@ -264,30 +264,30 @@
 </div>
 </div>
 
-<div id="outline-container-org9adea26" class="outline-4">
-<h4 id="org9adea26">Install and configure</h4>
-<div class="outline-text-4" id="text-org9adea26">
+<div id="outline-container-orge7c4f07" class="outline-4">
+<h4 id="orge7c4f07">Install and configure</h4>
+<div class="outline-text-4" id="text-orge7c4f07">
 </div>
 <ul class="org-ul">
-<li><a id="org01f1a1c"></a>Install<br />
-<div class="outline-text-5" id="text-org01f1a1c">
+<li><a id="orgc00b60e"></a>Install<br />
+<div class="outline-text-5" id="text-orgc00b60e">
 <pre class="example">
 # apt install emacs
 </pre>
 </div>
 </li>
 
-<li><a id="org866f056"></a>Confgure basic useful setup (here we create our .emacs config file)<br />
-<div class="outline-text-5" id="text-org866f056">
+<li><a id="org27d53a8"></a>Confgure basic useful setup (here we create our .emacs config file)<br />
+<div class="outline-text-5" id="text-org27d53a8">
 <pre class="example">
 # emacs .emacs
 </pre>
 </div>
 </li>
 
-<li><a id="orgc24b512"></a>Paste the following<br />
-<div class="outline-text-5" id="text-orgc24b512">
-<pre class="example" id="orge247b49">
+<li><a id="orgd9ac8a5"></a>Paste the following<br />
+<div class="outline-text-5" id="text-orgd9ac8a5">
+<pre class="example" id="orgb7f18df">
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
@@ -304,7 +304,6 @@
  '(tool-bar-mode nil)
  '(window-divider-mode nil))
 
-#(set-face-attribute 'default nil :family "monospace" :height 90)
 (recentf-mode 1)
 (global-set-key "\C-o" 'recentf-open-files)
 (menu-bar-mode -1)
@@ -321,28 +320,28 @@
 </div>
 </div>
 
-<div id="outline-container-orgd59f744" class="outline-2">
-<h2 id="orgd59f744"><span class="section-number-2">4.</span> Samba</h2>
+<div id="outline-container-org3040f1e" class="outline-2">
+<h2 id="org3040f1e"><span class="section-number-2">4.</span> Samba</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org7a1d34e" class="outline-3">
-<h3 id="org7a1d34e"><span class="section-number-3">4.1.</span> Preparation</h3>
+<div id="outline-container-orgabd2b4f" class="outline-3">
+<h3 id="orgabd2b4f"><span class="section-number-3">4.1.</span> Preparation</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org15e359c" class="outline-4">
-<h4 id="org15e359c">Install and configure</h4>
-<div class="outline-text-4" id="text-org15e359c">
+<div id="outline-container-org5642873" class="outline-4">
+<h4 id="org5642873">Install and configure</h4>
+<div class="outline-text-4" id="text-org5642873">
 </div>
 <ul class="org-ul">
-<li><a id="orgf2d8709"></a>Install Samba<br />
-<div class="outline-text-5" id="text-orgf2d8709">
+<li><a id="org76da651"></a>Install Samba<br />
+<div class="outline-text-5" id="text-org76da651">
 <pre class="example">
 # apt install samba
 </pre>
 </div>
 </li>
-<li><a id="orgad69fba"></a>Optionally, rename the Debian default Samba configuration file to begin with a blank<br />
-<div class="outline-text-5" id="text-orgad69fba">
+<li><a id="org756e215"></a>Optionally, rename the Debian default Samba configuration file to begin with a blank<br />
+<div class="outline-text-5" id="text-org756e215">
 <pre class="example">
 # mv /etc/samba/smb.{conf,conf.orig}
 </pre>
@@ -352,21 +351,21 @@
 </div>
 </div>
 
-<div id="outline-container-orgb7e5a28" class="outline-3">
-<h3 id="orgb7e5a28"><span class="section-number-3">4.2.</span> A simple share, read/write for anyone</h3>
+<div id="outline-container-org813aa63" class="outline-3">
+<h3 id="org813aa63"><span class="section-number-3">4.2.</span> A simple share, read/write for anyone</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li>Ownership of all new directories and files created by any samba client (e.g. Windows) is simplified by <code>force user = sam</code> (where sam is any standard linux user account)</li>
 </ul>
 </div>
 
-<div id="outline-container-org571450b" class="outline-4">
-<h4 id="org571450b">Linux directories</h4>
-<div class="outline-text-4" id="text-org571450b">
+<div id="outline-container-org5a4ecc4" class="outline-4">
+<h4 id="org5a4ecc4">Linux directories</h4>
+<div class="outline-text-4" id="text-org5a4ecc4">
 </div>
 <ul class="org-ul">
-<li><a id="orgada4718"></a>Create share directory and change its ownership to a standard linux user account (where sam is any standard linux user account)<br />
-<div class="outline-text-5" id="text-orgada4718">
+<li><a id="org4a2c96f"></a>Create share directory and change its ownership to a standard linux user account (where sam is any standard linux user account)<br />
+<div class="outline-text-5" id="text-org4a2c96f">
 <pre class="example">
 # mkdir /mnt/share
 # chown sam:sam /mnt/share
@@ -376,19 +375,19 @@
 </ul>
 </div>
 
-<div id="outline-container-org3004583" class="outline-4">
-<h4 id="org3004583">Configure samba</h4>
-<div class="outline-text-4" id="text-org3004583">
+<div id="outline-container-orgd6eabce" class="outline-4">
+<h4 id="orgd6eabce">Configure samba</h4>
+<div class="outline-text-4" id="text-orgd6eabce">
 </div>
 <ul class="org-ul">
-<li><a id="orgd27057c"></a>Edit /etc/samba/smb.conf<br />
-<div class="outline-text-5" id="text-orgd27057c">
+<li><a id="org7ab13ee"></a>Edit /etc/samba/smb.conf<br />
+<div class="outline-text-5" id="text-org7ab13ee">
 <pre class="example">
 # emacs /etc/samba/smb.conf
 </pre>
 
 
-<pre class="example" id="orgfe3baeb">
+<pre class="example" id="org501cd94">
 [global]
 map to guest = Bad User
 
@@ -401,8 +400,8 @@ force user = sam
 </div>
 </li>
 
-<li><a id="orga17392c"></a>Reload samba<br />
-<div class="outline-text-5" id="text-orga17392c">
+<li><a id="org7b9d154"></a>Reload samba<br />
+<div class="outline-text-5" id="text-org7b9d154">
 <pre class="example">
 # systemctl reload smb
 </pre>
@@ -411,9 +410,9 @@ force user = sam
 </ul>
 </div>
 
-<div id="outline-container-org8517c34" class="outline-4">
-<h4 id="org8517c34">Anonymous access</h4>
-<div class="outline-text-4" id="text-org8517c34">
+<div id="outline-container-orge241608" class="outline-4">
+<h4 id="orge241608">Anonymous access</h4>
+<div class="outline-text-4" id="text-orge241608">
 <ul class="org-ul">
 <li>For the simplest of guest shares, we can avoid clients (e.g. Windows) even asking our guest for a username and password by having exactly zero samba user accounts</li>
 <li>If these have been previously created and are not needed, optionally delete all samba accounts</li>
@@ -421,16 +420,16 @@ force user = sam
 </div>
 
 <ul class="org-ul">
-<li><a id="orgf252821"></a>List smb users<br />
-<div class="outline-text-5" id="text-orgf252821">
+<li><a id="org58bb889"></a>List smb users<br />
+<div class="outline-text-5" id="text-org58bb889">
 <pre class="example">
 # pdbedit -L -v
 </pre>
 </div>
 </li>
 
-<li><a id="org8ba3eb2"></a>Delete each smb user<br />
-<div class="outline-text-5" id="text-org8ba3eb2">
+<li><a id="orgf0e324a"></a>Delete each smb user<br />
+<div class="outline-text-5" id="text-orgf0e324a">
 <pre class="example">
 # pdbedit -x -u sam
 </pre>
@@ -440,8 +439,8 @@ force user = sam
 </div>
 </div>
 
-<div id="outline-container-orga4b9789" class="outline-3">
-<h3 id="orga4b9789"><span class="section-number-3">4.3.</span> Private user shares, and shared read/write for anyone</h3>
+<div id="outline-container-org885044d" class="outline-3">
+<h3 id="org885044d"><span class="section-number-3">4.3.</span> Private user shares, and shared read/write for anyone</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
 <li>Two users (sam and ba) each need a private directory; there is also a writeable shared directory</li>
@@ -450,13 +449,13 @@ force user = sam
 </ul>
 </div>
 
-<div id="outline-container-org7eab875" class="outline-4">
-<h4 id="org7eab875">Linux directories</h4>
-<div class="outline-text-4" id="text-org7eab875">
+<div id="outline-container-org3c73a5a" class="outline-4">
+<h4 id="org3c73a5a">Linux directories</h4>
+<div class="outline-text-4" id="text-org3c73a5a">
 </div>
 <ul class="org-ul">
-<li><a id="orgd7f5c7d"></a>Create user sam's directory, change ownership and linux permission<br />
-<div class="outline-text-5" id="text-orgd7f5c7d">
+<li><a id="org7c12b2e"></a>Create user sam's directory, change ownership and linux permission<br />
+<div class="outline-text-5" id="text-org7c12b2e">
 <pre class="example">
 # mkdir /srv/sam
 # chown sam:sam /srv/sam
@@ -465,8 +464,8 @@ force user = sam
 </div>
 </li>
 
-<li><a id="org6703a9b"></a>Create user ba's directory, change ownership and linux permission<br />
-<div class="outline-text-5" id="text-org6703a9b">
+<li><a id="org53f4014"></a>Create user ba's directory, change ownership and linux permission<br />
+<div class="outline-text-5" id="text-org53f4014">
 <pre class="example">
 # mkdir /srv/ba
 # chown ba:ba /srv/ba
@@ -477,19 +476,19 @@ force user = sam
 </ul>
 </div>
 
-<div id="outline-container-org1226139" class="outline-4">
-<h4 id="org1226139">Configure samba</h4>
-<div class="outline-text-4" id="text-org1226139">
+<div id="outline-container-orge5d4eac" class="outline-4">
+<h4 id="orge5d4eac">Configure samba</h4>
+<div class="outline-text-4" id="text-orge5d4eac">
 </div>
 <ul class="org-ul">
-<li><a id="org42b4b83"></a>Edit /etc/samba/smb.conf<br />
-<div class="outline-text-5" id="text-org42b4b83">
+<li><a id="org996eaf0"></a>Edit /etc/samba/smb.conf<br />
+<div class="outline-text-5" id="text-org996eaf0">
 <pre class="example">
 # emacs /etc/samba/smb.conf
 </pre>
 
 
-<pre class="example" id="org475d807">
+<pre class="example" id="orgd8b9c9c">
 [global]
 map to guest = Bad User
 
@@ -513,8 +512,8 @@ create mask = 0666
 </div>
 </li>
 
-<li><a id="org7f9970c"></a>Reload samba<br />
-<div class="outline-text-5" id="text-org7f9970c">
+<li><a id="org9d4de41"></a>Reload samba<br />
+<div class="outline-text-5" id="text-org9d4de41">
 <pre class="example">
 # systemctl reload smb
 </pre>
@@ -523,9 +522,9 @@ create mask = 0666
 </ul>
 </div>
 
-<div id="outline-container-org581a2e7" class="outline-4">
-<h4 id="org581a2e7">Users sam and ba need samba user accounts (in addition to their linux accounts)</h4>
-<div class="outline-text-4" id="text-org581a2e7">
+<div id="outline-container-orgf0c07c1" class="outline-4">
+<h4 id="orgf0c07c1">Users sam and ba need samba user accounts (in addition to their linux accounts)</h4>
+<div class="outline-text-4" id="text-orgf0c07c1">
 <pre class="example">
 # pdbedit -a -u sam
 # pdbedit -a -u ba
@@ -537,7 +536,7 @@ create mask = 0666
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: M Johnson</p>
-<p class="date">Created: 2024-03-06 Wed 09:38</p>
+<p class="date">Created: 2024-03-14 Thu 17:48</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
